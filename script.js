@@ -39,33 +39,33 @@ const commands = {
 +--------------------+-------------------------------------------------------------+
 |      Project       |                         Description                         |
 +--------------------+-------------------------------------------------------------+
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>RUF Assassins</a>      | Web application to facilitate game for RUF student          |
+| <a href="https://github.com/AJSteinhauser/RUF_Assassins" target=”_blank”>RUF Assassins</a>      | Web application to facilitate game for RUF student          |
 |                    | organization. Built in Django web framework and makes use   |
 |                    | of Twilio API, MySQL, BootStrap, and Google maps SDK.       |
 | ------------------ | ----------------------------------------------------------  |
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Undead Defense</a>     | 2.5D top-down shooter game implemented on the               |
+| <a href="https://www.roblox.com/games/4480196475/Undead-Defense-Under-Construction" target=”_blank”>Undead Defense</a>     | 2.5D top-down shooter game implemented on the               |
 |                    | Roblox platform. Mobile, PC, & XBOX support. Cool           |
 |                    | algorithms implemented in lua including: Quad Trees, Boids  |
 |                    | , A*. And other system design challenges such as client     |
 |                    | replication, data storage, and scalability                  |
 | ------------------ | ----------------------------------------------------------  |
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Tiny C Lexer</a>       | Lexical and Syntax analysis for subset of  c                |
+| <a href="https://github.com/AJSteinhauser/TinyCLexcer" target=”_blank”>Tiny C Lexer</a>       | Lexical and Syntax analysis for subset of  c                |
 |                    | programming language. Written in c, uses Yacc and Bison.    |
 |                    | Is able to catch syntax errors and suggest changes.         |
 | ------------------ | ----------------------------------------------------------  |
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Vending Machine</a>    | Website built to simulate a vending machine in              |
+| <a href="https://github.com/AJSteinhauser/Vending-Machine" target=”_blank”>Vending Machine</a>    | Website built to simulate a vending machine in              |
 |                    | virtual space, built using Django web framework. Features   |
 |                    | password encryption, REST api, userdata management.         |
 | ------------------ | ----------------------------------------------------------  |
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Classic City Books</a> | The result of a semester long group project that            |
+| <a href="https://github.com/AJSteinhauser/ClassicCityBooks" target=”_blank”>Classic City Books</a> | The result of a semester long group project that            |
 |                    | followed the Scrum Software development cycle. There were   |
 |                    | several sprint cycles and documentation was generated       |
 |                    | throughout to build a complete online bookstore.            |
 | ------------------ | ----------------------------------------------------------  |
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Arcade</a>             | An arcade GUI desktop app consisting of Tetris and 2048     |
+| <a href="https://github.com/AJSteinhauser/cs1302-arcade" target=”_blank”>Arcade</a>             | An arcade GUI desktop app consisting of Tetris and 2048     |
 |                    | game implemented in Java using the JavaFX GUI library.      |
 | ------------------ | ----------------------------------------------------------  |
-| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Discussion Board</a>   | A UI/UX design group project with multiple ideations        |
+| <a href="https://ajsteinhauser.github.io/HCI_Project.github.io/" target=”_blank”>Discussion Board</a>   | A UI/UX design group project with multiple ideations        |
 |                    | stages considering and discussing how to make it accessible |
 |                    | to all sorts of people including those with disabilities.   |
 |                    | Final result is a figma UI mockup.                          |
