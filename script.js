@@ -16,7 +16,8 @@ const commands = {
     <span id='command'>social</span>    Links to my socials
     <span id='command'>contact</span>   List of ways to contact me
     <span id='command'>counter</span>   Counts the number of visits to my site
-    <span id='command'>projects</span>  Some things I am proud of</pre>`,
+    <span id='command'>projects</span>  Some things I am proud of
+    <span id='command'>resume</span>    Get a copy of my resume</pre>`,
     "clear" : "exe",
     "whois": `
             <br>Hello, I'm AJ!👋<br><br> I am a programmer from Atlanta, Georgia who loves to tinker and make cool projects like this. I recently graduated from the University of Georgia (Go DAWGS!)🐶  with a degree in computer science and I am looking to start my career in Software Engineering. <br><br>
@@ -71,7 +72,8 @@ const commands = {
 |                    | Final result is a figma UI mockup.                          |
 +--------------------+-------------------------------------------------------------+
 </pre>`,
-    "counter" : "exe"
+    "counter" : "exe",
+    "resume" : "exe", 
 }
 
 //<a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>RoRender</a> 
@@ -121,7 +123,6 @@ function init(){
     outputStack.push(newElement);
 
     if (window.location.href != "http://127.0.0.1:5500/homepage.html"){
-
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.countapi.xyz/hit/ajportfolio/visitsdeploy");
         xhr.responseType = "json";
@@ -166,6 +167,10 @@ function doCommand(command) {
     }
     if (command == "counter"){ 
         return "&nbsp; There have been <span id='command'>" + vists.toString() + "</span> visits to this site"
+    }
+    if (command == "resume"){
+        window.open("https://ajsteinhauser.github.io/portfolio/AJ_Resume.pdf", "_blank");
+        return "Opening AJ_Resume.pdf"
     }
     return "";
 }
