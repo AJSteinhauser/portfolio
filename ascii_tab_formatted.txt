@@ -1,0 +1,31 @@
+Project	Description
+RUF Assassins	Web application to facilitate game for RUF student 
+|	organization. Built in Django web framework and makes use 
+|	of Twilio API, MySQL, BootStrap, and Google maps SDK.
+------------------	----------------------------------------------------------
+Undead Defense	2.5D top-down shooter game implemented on the 
+|	Roblox platform. Mobile, PC, & XBOX support. Cool 
+|	algorithms implemented in lua including: Quad Trees, Boids
+|	, A*. And other system design challenges such as client 
+|	replication, data storage, and scalability  
+------------------	----------------------------------------------------------
+Tiny C Lexer	Lexical and Syntax analysis for subset of  c 
+|	programming language. Written in c, uses Yacc and Bison. 
+|	Is able to catch syntax errors and suggest changes.
+------------------	----------------------------------------------------------
+Vending Machine	Website built to simulate a vending machine in 
+|	virtual space, built using Django web framework. Features 
+|	password encryption, REST api, userdata management.
+------------------	----------------------------------------------------------
+Classic City Books	The result of a semester long group project that 
+|	followed the Scrum Software development cycle. There were
+|	several sprint cycles and documentation was generated
+| 	throughout to build a complete online bookstore.
+------------------	----------------------------------------------------------
+Arcade	An arcade GUI desktop app consisting of Tetris and 2048 
+|	game implemented in Java using the JavaFX GUI library. 
+------------------	----------------------------------------------------------
+Discussion Board	A UI/UX design group project with multiple ideations 
+|	stages considering and discussing how to make it accessible 
+|	to all sorts of people including those with disabilities.  
+|	Final result is a figma UI mockup.

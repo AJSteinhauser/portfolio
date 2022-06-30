@@ -2,6 +2,7 @@
 const inputBox = document.getElementById("input");
 const outputBox = document.getElementById("output");
 const termconsole = document.getElementById("console");
+const topBar = document.getElementById("topBar")
 
 let vists = 0;
 
@@ -35,26 +36,45 @@ const commands = {
                 `,
     "projects" : `These are clickable links...
 <pre>
-================= ====================================================================== 
-Project                                   Description                               
-================= ====================================================================== 
-<a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>RoRender</a>          An orthographic image rendering application for the Roblox Platform   
-|                 Over 3,000 people have downloaded application powers developer's      
-|                 games with millions of plays.                                         
----------------   -------------------------------------------------------------------   
-<a href="https://www.roblox.com/games/4480196475/Undead-Defense-Under-Construction" target=”_blank”>Undead Defense</a>    2.5D top-down shooter game implemented on the Roblox platform         
-|                 Mobile, PC, & XBOX support Cool algorithms implemented in lua         
-|                 including: Quad Trees, Boids, A*. And other system design             
-|                 challenges such as client replication, data storage, and scalability  
----------------   -------------------------------------------------------------------   
-<a href="https://github.com/AJSteinhauser/RUF_Assassins" target=”_blank”>RUF Assassins</a>     Web application to facilitate game for RUF student                    
-|                 organization. Built in Django web framework and makes use of          
-|                 Twilio API, MySQL, BootStrap, and Google maps SDK.                    
-================= ====================================================================== 
++--------------------+-------------------------------------------------------------+
+|      Project       |                         Description                         |
++--------------------+-------------------------------------------------------------+
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>RUF Assassins</a>      | Web application to facilitate game for RUF student          |
+|                    | organization. Built in Django web framework and makes use   |
+|                    | of Twilio API, MySQL, BootStrap, and Google maps SDK.       |
+| ------------------ | ----------------------------------------------------------  |
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Undead Defense</a>     | 2.5D top-down shooter game implemented on the               |
+|                    | Roblox platform. Mobile, PC, & XBOX support. Cool           |
+|                    | algorithms implemented in lua including: Quad Trees, Boids  |
+|                    | , A*. And other system design challenges such as client     |
+|                    | replication, data storage, and scalability                  |
+| ------------------ | ----------------------------------------------------------  |
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Tiny C Lexer</a>       | Lexical and Syntax analysis for subset of  c                |
+|                    | programming language. Written in c, uses Yacc and Bison.    |
+|                    | Is able to catch syntax errors and suggest changes.         |
+| ------------------ | ----------------------------------------------------------  |
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Vending Machine</a>    | Website built to simulate a vending machine in              |
+|                    | virtual space, built using Django web framework. Features   |
+|                    | password encryption, REST api, userdata management.         |
+| ------------------ | ----------------------------------------------------------  |
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Classic City Books</a> | The result of a semester long group project that            |
+|                    | followed the Scrum Software development cycle. There were   |
+|                    | several sprint cycles and documentation was generated       |
+|                    | throughout to build a complete online bookstore.            |
+| ------------------ | ----------------------------------------------------------  |
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Arcade</a>             | An arcade GUI desktop app consisting of Tetris and 2048     |
+|                    | game implemented in Java using the JavaFX GUI library.      |
+| ------------------ | ----------------------------------------------------------  |
+| <a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>Discussion Board</a>   | A UI/UX design group project with multiple ideations        |
+|                    | stages considering and discussing how to make it accessible |
+|                    | to all sorts of people including those with disabilities.   |
+|                    | Final result is a figma UI mockup.                          |
++--------------------+-------------------------------------------------------------+
 </pre>`,
     "counter" : "exe"
 }
 
+//<a href="https://devforum.roblox.com/t/minimap-render-rorenderv2/965827" target=”_blank”>RoRender</a> 
 var outputStack = [];
 
 //Input lock
@@ -66,10 +86,13 @@ inputBox.addEventListener("focusout",function(){
 
 //Make remove excess elements
 function keepTextInFrame(){
+    verticallyBound()
+    /*
     while (verticallyBound()){
         outputStack[0].remove();
         outputStack.shift();
     }
+    */
 }
 
 
@@ -83,6 +106,7 @@ inputBox.addEventListener("keypress", function(event) {
         outputBox.appendChild(newElement);
         outputStack.push(newElement);
         keepTextInFrame();
+        outputBox.scrollTop = outputBox.scrollHeight - outputBox.clientHeight;
         inputBox.value = ""
     }
 });
@@ -96,13 +120,16 @@ function init(){
     outputBox.appendChild(newElement);
     outputStack.push(newElement);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/ajportfolio/visits");
-    xhr.responseType = "json";
-    xhr.onload = function() {
-        vists = this.response.value;
+    if (window.location.href != "http://127.0.0.1:5500/homepage.html"){
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.countapi.xyz/hit/ajportfolio/visitsdeploy");
+        xhr.responseType = "json";
+        xhr.onload = function() {
+            vists = this.response.value;
+        }
+        xhr.send();
     }
-    xhr.send();
 }
 
 init();
@@ -131,6 +158,8 @@ function getCommand(command){
 function doCommand(command) {
     if (command == "clear"){
         const elements = document.getElementsByClassName("line");
+        outputBox.style.height = null;
+        outputBox.style.overflowY = null;
         while(elements.length > 0){
             elements[0].parentNode.removeChild(elements[0]);
         }
@@ -144,6 +173,19 @@ function doCommand(command) {
 //Check for outside of viewport 
 function verticallyBound() {
     let consoleRect = termconsole.getBoundingClientRect();
+    let topBarRect = topBar.getBoundingClientRect();
+    let outputRect = outputBox.getBoundingClientRect();
     var textRect = inputBox.getBoundingClientRect();
-    return consoleRect.bottom <= textRect.bottom;
+
+    if (consoleRect.bottom <= textRect.bottom){
+        outputBox.style.height = (consoleRect.height - topBarRect.height - textRect.height - 5).toString() + "px";
+        outputBox.style.overflowY = "scroll";
+    }
 }
+
+//Reactive site 
+function reportWindowSize() {
+    verticallyBound();
+}   
+  
+window.onresize = reportWindowSize;
