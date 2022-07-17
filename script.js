@@ -5,6 +5,7 @@ const termconsole = document.getElementById("console");
 const topBar = document.getElementById("topBar")
 
 let vists = 0;
+let intialCommand = true;
 
 const commands = {
     "init" : "Welcome to my web terminal portfolio! For a list of commands, type <span id='command'>help</span>",
@@ -121,10 +122,14 @@ function init(){
     newElement.innerHTML = commands["init"];
     outputBox.appendChild(newElement);
     outputStack.push(newElement);
+}
 
+init();
+
+function updateCounter(){
     if (window.location.href != "http://127.0.0.1:5500/homepage.html"){
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.countapi.xyz/hit/ajportfolio/visitsdeploy");
+        xhr.open("GET", "https://api.countapi.xyz/hit/ajportfolio/visitsdeploy1");
         xhr.responseType = "json";
         xhr.onload = function() {
             vists = this.response.value;
@@ -133,11 +138,15 @@ function init(){
     }
 }
 
-init();
+
 
 //Doing command action/getting command text
 function getCommand(command){
     textAppend = "<span id='sys_text'>DevConsole ~ </span>" + command + "<br>"
+    if (intialCommand){
+        updateCounter();
+        intialCommand = false;
+    }
     if (commands.hasOwnProperty(command)){
         if (commands[command] == "exe"){
             let returnValue = doCommand(command);
@@ -157,6 +166,7 @@ function getCommand(command){
 
 //Command Execution
 function doCommand(command) {
+
     if (command == "clear"){
         const elements = document.getElementsByClassName("line");
         outputBox.style.height = null;
