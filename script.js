@@ -16,7 +16,6 @@ const commands = {
     <span id='command'>whois</span>     Short blurb about me
     <span id='command'>social</span>    Links to my socials
     <span id='command'>contact</span>   List of ways to contact me
-    <span id='command'>counter</span>   Counts the number of visits to my site
     <span id='command'>projects</span>  Some things I am proud of
     <span id='command'>resume</span>    Get a copy of my resume</pre>`,
     "clear" : "exe",
