@@ -23,7 +23,11 @@ const commands = {
             <br>Hello, I'm AJ!👋<br><br> I am a programmer from Atlanta, Georgia who loves to tinker and make cool projects like this. I recently graduated from the University of Georgia (Go DAWGS!)🐶  with a degree in computer science and I am looking to start my career in Software Engineering. <br><br>
             My software journey started in the 6th grade when I was introduced to Lua, a small scripting language on the platform Roblox. I was instantly hooked and learned the foundations of programming and problem solving through fun projects on the site. Now, my most successful projects are tools, built to give back to the Roblox community that taught so much.
             <br><br>
-            I have many other hobbies in addition to software including, playing Violin & Cello🎻, Rock Climbing🧗, Photography📸, and Lindy Hop🕺. These are things I love to do in my free time and improve myself by learning different perspectives on life through this variety of disciplines.            `,
+            I have many other hobbies in addition to software including, playing Violin & Cello🎻, Rock Climbing🧗, Photography📸, and Lindy Hop🕺. These are things I love to do in my free time and improve myself by learning different perspectives on life through this variety of disciplines.
+            <br><br>
+            Currently working as a front end software engineer for <a href="https://www.linkedin.com/company/perficient/" target=”_blank”>@Perficient</a>
+
+             `,
     "social": `
                 These are clickable links...<br>
                 &nbsp; <a href="https://www.linkedin.com/in/aj-steinhauser-11134a76/" target=”_blank” >LinkedIn<a><br>
@@ -32,7 +36,8 @@ const commands = {
                 &nbsp; <a href="https://www.facebook.com/profile.php?id=100001923304396" target=”_blank” >Facebook<a><br>
                 `,
     "contact": `
-                &nbsp; <span id="command">Phone:</span> (+1)770-778-1263<br>
+                &nbsp; <span id="command">Phone:</span> (+1)770-***-****<br>
+                &nbsp; <i>(Had to remove phone # as too many people would call me)</i><br>
                 &nbsp; <span id="command">Email:</span> ajsteinhauser11@gmail.com<br>
                 `,
     "projects" : `These are clickable links...
