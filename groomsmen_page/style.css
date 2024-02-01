@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Comfortaa", cursive;
+}
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #262626;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.movie-night {
+	background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
+
+.btn {
+	display: block;
+	padding: 10px 40px;
+	margin: 10px auto;
+	font-size: 1.1rem;
+	font-weight: 700;
+	border-radius: 4px;
+	outline: none;
+	text-decoration: none;
+	color: #784ba0;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:visited {
+	transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+	animation: gelatine 0.5s 1;
+}
+
+@keyframes gelatine {
+	0%,
+	100% {
+		transform: scale(1, 1);
+	}
+	25% {
+		transform: scale(0.9, 1.1);
+	}
+	50% {
+		transform: scale(1.1, 0.9);
+	}
+	75% {
+		transform: scale(0.95, 1.05);
+	}
+}
+
+/* SWIPER */
+
+.swiper {
+	width: 250px;
+	height: 450px;
+	padding: 50px 0;
+}
+
+.swiper-slide {
+	position: relative;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+.swiper-slide span {
+	position: absolute;
+	background-color: #7289da;
+	top: 0;
+	right: 0;
+	color: #fff;
+	padding: 7px 18px;
+	margin: 10px;
+	border-radius: 10px;
+	letter-spacing: 2px;
+	font-size: 0.8rem;
+	font-weight: 700;
+	font-family: inherit;
+	background-color: ;
+}
+
+.swiper-slide h2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.1rem;
+	line-height: 1.4;
+	margin: 0 0 20px 20px;
+}
+
+/*
+
+			<img src="https://ajsteinhauser.github.io/portfolio/groomsmen/Max.png">
+			<img src="https://ajsteinhauser.github.io/portfolio/groomsmen/Sam.png">
+			<img src="https://ajsteinhauser.github.io/portfolio/groomsmen/William.png">
+			<img src="https://ajsteinhauser.github.io/portfolio/groomsmen/Rigdon.png">
+			<img src="https://ajsteinhauser.github.io/portfolio/groomsmen/Jordan.png">
+			<img src="https://ajsteinhauser.github.io/portfolio/groomsmen/Mark.png">
+
+*/
+
+.swiper-slide#mark {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Mark.png") no-repeat
+			50% 50% / cover;
+}
+
+.swiper-slide#max {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Max.png") no-repeat
+			50% 50% / cover;
+}
+
+.swiper-slide#rigdon {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Rigdon.png")
+			no-repeat 50% 50% / cover;
+}
+
+.swiper-slide#sam {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Sam.png") no-repeat
+			50% 50% / cover;
+}
+
+.swiper-slide#ben {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Ben.png") no-repeat
+			50% 50% / cover;
+}
+
+.swiper-slide#jordan {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Jordan.png")
+			no-repeat 50% 50% / cover;
+}
+
+.swiper-slide#william {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/William.png")
+			no-repeat 50% 50% / cover;
+}
+
+.swiper-slide#chase {
+	background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+		url("https://ajsteinhauser.github.io/portfolio/groomsmen/Chase.png") no-repeat
+			50% 50% / cover;
+}
+
+.man-image {
+	display: block;
+	border-radius: inherit;
+	width: calc(90%);
+	border-radius: 15px;
+	border: solid;
+	border-width: 8px;
+	border-color: #424549;
+}
+
+.image-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.body {
+	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+}
+
+body::-webkit-scrollbar {
+	-webkit-appearance: none;
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+html {
+	overflow-x: hidden;
+	background-color: #1e2124;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 4in;
+	width: 98vw;
+	overflow-x: inherit;
+}
+
+.spacer {
+	height: 50vh;
+}
+
+.name-tag {
+	text-align: center;
+	box-shadow: 0px 10px 15px black;
+	color: white;
+	padding: 15px;
+	border-radius: 10px;
+	border: solid;
+	border-color: #424549;
+	border-width: 5px;
+	background-color: #36393e;
+	width: 60%;
+	text-wrap: wrap;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#favor {
+	margin-top: 20px;
+}
+
+.bouncer {
+	font-size: 60px;
+	display: block;
+	animation: bounce 1s infinite;
+	margin-top: 30px;
+}
+@keyframes bounce {
+	0%,
+	to {
+		transform: translateY(-25%);
+		-webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+	}
+
+	50% {
+		transform: none;
+		-webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+	}
+}
+
+* {
+	font-family: monospace;
+	text-wrap: wrap;
+}
+
+h1,
+h2 {
+	color: white;
+}
+
+h3,
+h4 {
+	color: whitesmoke;
+	margin: 0px;
+}
+
+.text-element {
+	width: 100%;
+	text-align: center;
+}
+
+.location {
+	margin-top: 15px;
+}
+
+.big {
+	background-color: #7289da;
+	box-shadow: 0px 5px 10px black;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 5px;
+	padding-left: 5px;
+	width: 90%;
+	border-radius: 15px;
+}
+
+.header {
+	font-size: 3rem;
+	text-wrap: nowrap;
+	width: 100%;
+}
+
+.personal-note {
+	text-align: center;
+	color: white;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-radius: 10px;
+	border: solid;
+	border-color: #424549;
+	border-width: 5px;
+	background-color: #36393e;
+	width: 90%;
+	text-wrap: wrap;
+}
+
+.preloader {
+	display: none;
+}
